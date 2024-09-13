@@ -1,0 +1,38 @@
+import { Injectable } from '@angular/core';
+import { Project } from '../_models/Project';
+import { Tag } from '../_models/Tag';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class ProjectsService {
+
+  project : Project[] = [
+    {id: 0,name: "Portfolio",summary: "A personal website showcasing my projects and skills.",description: "This portfolio website is built using Angular and TypeScript. It serves as a platform to display my completed projects, highlight my technical expertise, and provide information about my experience and skills in web development. The website is fully responsive, incorporates animations, and features a clean, modern UI. Technologies used include Angular, TypeScript, HTML, and CSS.",projectLink : '',tags: [Tag.Angular, Tag.Typescript, Tag.HTML, Tag.CSS],pictures: [],},
+    {id: 1,name: "Epytodo", summary: "A RESTful API for managing a Todo List application using Node.js and MySQL.",description: "EPYTODO is a project that involves creating a RESTful API for a Todo List application. The backend is built using Node.js with Express, and it connects to a MySQL database to manage users and their tasks. Key features include user registration and login, task creation, updating, and deletion, as well as JWT-based authentication for secure access to protected routes. The project focuses on backend development, with a well-defined architecture and use of essential packages like express, mysql2, and jsonwebtoken. Optionally, a frontend can be developed to interact with the API.",projectLink : '',tags: [Tag.NODEJS,Tag.REACT, Tag.MYSQL],pictures: [],},
+    {id: 2,name: "mysh",summary: "A custom Unix shell implemented in C.",description: "Mysh is a Unix-like shell built entirely in C. It allows users to execute standard shell commands, handle file redirections, and manage processes. It includes basic shell functionalities such as parsing, job control (running commands in the background or foreground), and signal handling. The project is designed to be lightweight yet robust, making it suitable for everyday command-line tasks.",projectLink: 'https://github.com/Jmarc07/shell',tags: [Tag.C],pictures: [],},
+    {id: 3,name: "Game",summary: "A collection of simple games like Rock-Paper-Scissors and Hangman.",description: "This project includes two classic games: Rock-Paper-Scissors and Hangman, implemented in both C and Python. These games showcase the fundamentals of game development and cross-language programming. The C versions focus on performance and low-level logic, while the Python versions emphasize rapid development and scripting capabilities. The project serves as a fun way to learn and explore both languages in the context of game development.",projectLink: '',tags: [Tag.C, Tag.Python],pictures: [],},
+    {id: 4, name: "Basic Web Server",summary: "A simple web server implemented in C++.",description: "This project involves creating a basic web server from scratch using C++. The server supports handling HTTP requests, serving static files, and basic routing. Key features include socket programming for network communication, parsing HTTP requests, and sending HTTP responses. The server is designed to demonstrate fundamental web server concepts and networking in C++. It provides a foundational understanding of how web servers operate and can be extended with more complex functionalities as needed.",projectLink: '',tags: [Tag.Cplusplus],pictures: [],},
+    {id: 5,name: "MYRPG",summary: "An immersive RPG game built in C with rich gameplay and a polished user interface.",description: "MYRPG is a role-playing game developed in C that offers players an engaging and complete gaming experience. The game features a well-designed user interface, a coherent universe with visual and audio assets, and a structured gameplay loop including combat, quests, and character progression. Key elements include player characteristics that impact combat, an inventory system, experience and leveling mechanics, NPC interactions, and a quest system. Technical features include a collision system, camera movements, 3D effects, and a saving system. The game supports multiple resolutions, input handling, animated sprites, and various menu options. Additionally, the game offers a main menu, in-game menu, and advanced collision and particle systems for enhanced gameplay dynamics.",projectLink: '',tags: [Tag.Cplusplus, Tag.C],pictures: [],}    ,
+    {id: 6,name: "SECURED",summary: "A C-based library implementing hash tables with custom hash functions for secure data storage.",description: "The SECURED project involves creating a hash table library in C, designed to securely store and manage data such as robot blueprints. Key components include the development of a custom hash function, the implementation of hash table operations (insertion, deletion, search, and dumping), and handling collisions using separate chaining. The project requires building a library (`libhashtable.a`) with functions for creating and managing hash tables, alongside a robust hash function that meets criteria for security and efficiency. The library supports error handling, file organization, and adheres to size constraints for efficient use. The goal is to understand and apply hash tables in securing data against unauthorized access while demonstrating proficiency in C programming and library management.",projectLink: '',tags: [Tag.C],pictures: [],},
+    {id: 7,name: "ORGANIZED",summary: "A C-based program to manage and sort hardware components using linked lists and sorting algorithms.",description: "The ORGANIZED project involves developing a C program that manages a virtual workshop for hardware components. The program uses linked lists to store hardware items, which can be added, deleted, displayed, and sorted. The `add` command inserts new items in reverse order, the `del` command removes specified items, and the `disp` command displays the current list. The `sort` command organizes the items based on various criteria such as type, name, and ID, with support for reverse sorting. The project requires implementing these functionalities with proper error handling and efficient sorting algorithms. The program is tested through a shell interface provided by a pre-defined `libshell.a` library, and the commands must handle various edge cases and input formats.",projectLink: '',tags: [Tag.C],pictures: [],},
+    {id: 8,name: "A-MAZE-D",summary: "A C-based program to navigate robots through a maze using pathfinding algorithms.",description: "The A-MAZE-D project requires developing a C program that navigates robots through a maze from an entrance to an exit. The program reads maze descriptions from standard input, which include rooms, their coordinates, and tunnels connecting them. The goal is to find the shortest paths for robots to move from the entrance to the exit while avoiding congestion and optimizing the number of robots that can pass through in each lap. The program needs to output the number of robots, the maze configuration, and a detailed series of moves for each lap. This involves implementing pathfinding algorithms and handling maze representation efficiently. Additionally, a bonus option includes creating a labyrinth viewer for visualization.",projectLink: '',tags: [Tag.C],pictures: [],},
+    
+  ];
+
+  constructor() { }
+
+  GetProjects() {
+    return this.project;
+  }
+
+  GetProjectById(id: number) : Project {
+    let project = this.project.find(project => project.id === id);
+
+    if (project === undefined) { 
+      throw new TypeError('There is no project that matches the id: ' + id);
+    }
+
+    return project;
+  }
+}
