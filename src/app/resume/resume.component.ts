@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Renderer2 } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
 @Component({
@@ -8,7 +8,16 @@ import { Title } from '@angular/platform-browser';
 })
 export class ResumeComponent {
 
-  constructor(private titleService: Title) {
+  constructor(private titleService: Title, private renderer: Renderer2) {
     this.titleService.setTitle('Jean-marc Naounou - Resume');
+  }
+
+  DownloadFile() {
+    let link = this.renderer.createElement('a');
+    link.setAttribute('target', '_blank');
+    link.setAttribute('href', 'https://drive.google.com/file/d/1oKcib6dyWExLUS89yAYVZbq-Lry2XsFo/view?usp=drive_link');
+    //link.setAttribute('download', 'resume.pdf');
+    link.click();
+    link.remove();
   }
 }

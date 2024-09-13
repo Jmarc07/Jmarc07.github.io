@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Project } from '../_models/Project';
-import { BsModalRef } from 'ngx-bootstrap/modal';
+//import { BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-project-card',
@@ -9,5 +9,5 @@ import { BsModalRef } from 'ngx-bootstrap/modal';
 })
 export class ProjectCardComponent {
   @Input() project = {} as Project;
-  bsModalRef?: BsModalRef;
+  //bsModalRef?: BsModalRef;
 }
