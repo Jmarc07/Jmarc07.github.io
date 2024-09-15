@@ -16,7 +16,6 @@ export class ResumeComponent {
     let link = this.renderer.createElement('a');
     link.setAttribute('target', '_blank');
     link.setAttribute('href', 'https://drive.google.com/file/d/1oKcib6dyWExLUS89yAYVZbq-Lry2XsFo/view?usp=drive_link');
-    //link.setAttribute('download', 'resume.pdf');
     link.click();
     link.remove();
   }
