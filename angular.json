@@ -112,6 +112,17 @@
           "options": {
             "baseHref": "/Jmarc07.github.io/"
           }
+        },
+        "e2e": {
+          "builder": "playwright-ng-schematics:playwright",
+          "options": {
+            "devServerTarget": "websiteAngular:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "websiteAngular:serve:production"
+            }
+          }
         }
       }
     }
