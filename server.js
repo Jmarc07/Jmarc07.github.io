@@ -2,12 +2,12 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
-// Servir les fichiers statiques
-app.use(express.static(path.join(__dirname, 'dist/website-angular')));
+const distPath = path.join(__dirname, 'dist/browser');
+app.use(express.static(distPath));
 
 // Routes
 app.get('/*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'dist/website-angular/index.html'));
+    res.sendFile(path.join(distPath, 'index.html'));
 });
 
 // Utiliser le port fourni par Render ou 3000 par défaut

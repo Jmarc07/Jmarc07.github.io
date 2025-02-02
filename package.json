@@ -3,14 +3,14 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "node server.js",
-    "build": "ng build",
+    "start": "npm run build && node server.js",
+    "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:websiteAngular": "node dist/website-angular/server/server.mjs",
-    "build:prod": "ng build --configuration production",
     "deploy": "ng deploy",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "postinstall": "ng build --configuration production"
   },
   "private": true,
   "dependencies": {
@@ -26,11 +26,13 @@
     "@angular/router": "^18.0.0",
     "@angular/ssr": "^18.0.6",
     "bootstrap": "^5.2.3",
-    "express": "^4.21.2",
+    "express": "^4.18.2",
     "ngx-bootstrap": "^18.0.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.14.3"
+    "zone.js": "~0.14.3",
+    "@angular/cli": "^18.0.6",
+    "@angular/compiler-cli": "^18.0.6"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^18.0.6",
@@ -53,5 +55,9 @@
     "purgecss-webpack-plugin": "^6.0.0",
     "typescript": "~5.4.2",
     "webpack-bundle-analyzer": "^4.10.2"
+  },
+  "engines": {
+    "node": "20.x",
+    "npm": "10.x"
   }
 }
