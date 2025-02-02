@@ -31,10 +31,8 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
+              "src/favicon.ico",
+              "src/assets"
             ],
             "styles": [
               "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
@@ -46,7 +44,9 @@
             "prerender": true,
             "ssr": {
               "entry": "server.ts"
-            }
+            },
+            "deployUrl": "https://jmarc07.github.io/",
+            "baseHref": "/Jmarc07.github.io/"
           },
           "configurations": {
             "production": {
@@ -105,6 +105,12 @@
               "src/styles.css"
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "/Jmarc07.github.io/"
           }
         }
       }
