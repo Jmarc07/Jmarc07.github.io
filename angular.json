@@ -32,7 +32,9 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/404.html",
+              "src/.nojekyll"
             ],
             "styles": [
               "./node_modules/ngx-bootstrap/datepicker/bs-datepicker.css",
@@ -45,8 +47,8 @@
             "ssr": {
               "entry": "server.ts"
             },
-            "deployUrl": "https://jmarc07.github.io/",
-            "baseHref": "/Jmarc07.github.io/"
+            "deployUrl": "/",
+            "baseHref": "/"
           },
           "configurations": {
             "production": {
@@ -110,7 +112,18 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "/Jmarc07.github.io/"
+            "baseHref": "/"
+          }
+        },
+        "e2e": {
+          "builder": "playwright-ng-schematics:playwright",
+          "options": {
+            "devServerTarget": "websiteAngular:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "websiteAngular:serve:production"
+            }
           }
         }
       }
