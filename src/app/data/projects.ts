@@ -93,7 +93,7 @@ export const projects: Project[] = [
     id: '6',
     slug: 'glados-functional-language',
     name: 'Glados',
-    domains: ['Functional Programming'],
+    domains: ['Functional Programming', 'Systems'],
     context: 'Academic',
     stack: ['Haskell', 'Bytecode', 'Assembly'],
     image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1080',
