@@ -96,7 +96,7 @@ export const projects: Project[] = [
     domains: ['Functional Programming'],
     context: 'Academic',
     stack: ['Haskell', 'Bytecode', 'Assembly'],
-    image: 'https://images.unsplash.com/photo-1581091215367-59ab6b6a5b3e?q=80&w=1080',
+    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1080',
     description: 'Custom programming language implementation with bytecode compilation and assembly generation.',
     problem: 'Design and implement a complete programming language from scratch, including compiler and runtime.',
     solution: 'Built a compiler using Haskell that generates bytecode and assembly, implementing lexical analysis, parsing, and code generation.',
