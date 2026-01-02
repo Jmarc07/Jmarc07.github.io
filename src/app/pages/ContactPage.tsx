@@ -48,7 +48,7 @@ export function ContactPage() {
               <h2 className="text-2xl mb-6">Contact Information</h2>
               <div className="space-y-4">
                 <a
-                  href="mailto:contact@example.com"
+                  href="mailto:jean-marc.naounou@epitech.eu"
                   className="flex items-center gap-4 p-4 border border-white/10 rounded-lg hover:bg-white/5 transition-colors"
                 >
                   <div className="p-3 rounded-lg bg-white/10">
