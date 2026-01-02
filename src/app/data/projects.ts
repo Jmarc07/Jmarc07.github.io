@@ -134,7 +134,7 @@ export const projects: Project[] = [
 ];
 
 export const getDomains = (): ProjectDomain[] => {
-  return ['Web', 'Backend', 'Frontend', 'Mobile', 'System','Security', 'Game', 'Network'];
+  return ['Web', 'Backend', 'Frontend', 'Mobile', 'System','Security', 'Game', 'Network', 'AI', 'DevOps'];
 };
 
 export const getProjectBySlug = (slug: string): Project | undefined => {
