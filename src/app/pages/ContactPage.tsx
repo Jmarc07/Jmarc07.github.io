@@ -56,7 +56,7 @@ export function ContactPage() {
                   </div>
                   <div>
                     <p className="text-sm text-gray-400">Email</p>
-                    <p className="text-white">contact@example.com</p>
+                    <p className="text-white">jean-marc.naounou@epitech.eu</p>
                   </div>
                 </a>
 
@@ -71,7 +71,7 @@ export function ContactPage() {
                   </div>
                   <div>
                     <p className="text-sm text-gray-400">GitHub</p>
-                    <p className="text-white">github.com/username</p>
+                    <p className="text-white">github.com/Jmarc07</p>
                   </div>
                 </a>
 
@@ -86,7 +86,7 @@ export function ContactPage() {
                   </div>
                   <div>
                     <p className="text-sm text-gray-400">LinkedIn</p>
-                    <p className="text-white">linkedin.com/in/username</p>
+                    <p className="text-white">linkedin.com/in/jean-marc-naounou</p>
                   </div>
                 </a>
               </div>

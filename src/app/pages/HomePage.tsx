@@ -21,10 +21,10 @@ export function HomePage() {
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-32">
         <div className="max-w-3xl">
           <h1 className="text-4xl md:text-6xl mb-6">
-            Développeur Full-Stack
+            Software Developer
           </h1>
           <p className="text-xl md:text-2xl text-gray-400 mb-8">
-            Création de solutions logicielles innovantes pour le web, mobile et systèmes
+            Développement de solutions logicielles orientées performance pour le web, le mobile et les systèmes
           </p>
           <div className="flex flex-wrap gap-4">
             <Link
@@ -50,14 +50,13 @@ export function HomePage() {
           <h2 className="text-3xl md:text-4xl mb-6">À propos</h2>
           <div className="max-w-3xl text-gray-300 space-y-4">
             <p>
-              Passionné par le développement logiciel depuis plusieurs années, je me spécialise dans la création
-              d'applications performantes et scalables. Mon expérience couvre l'ensemble du cycle de développement,
-              de la conception à la mise en production.
+              Développeur étudiant avec une approche polyvalente du développement logiciel.
+              J’interviens sur des projets front-end, back-end, mobile et jeux, avec une compréhension
+              des systèmes et des bases réseau.
             </p>
             <p>
-              Je suis constamment à la recherche de nouveaux défis techniques et j'aime collaborer sur des projets
-              innovants qui ont un impact réel. Mon approche combine expertise technique, créativité et attention
-              aux détails.
+              Curieux et adaptable, je m’intéresse à différents domaines techniques et cherche à
+              développer des solutions complètes, cohérentes et fonctionnelles.
             </p>
           </div>
         </div>
@@ -111,7 +110,7 @@ export function HomePage() {
               Travaillons ensemble
             </h2>
             <p className="text-gray-400 mb-8">
-              Je suis disponible pour des missions freelance et opportunités de stage.
+              Je suis disponible pour des opportunités de stage et des missions freelance.
               N'hésitez pas à me contacter pour discuter de votre projet.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
