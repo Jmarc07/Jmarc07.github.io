@@ -1,4 +1,4 @@
-export type ProjectDomain = 'AI' | 'Web' | 'Backend' | 'Frontend' | 'Mobile' | 'System' | 'Game' | 'Network' | 'Systems' | 'Security' | 'Game Development' | 'Automation' | 'Functional Programming' | 'DevOps';
+export type ProjectDomain = 'AI' | 'Web' | 'Backend' | 'Frontend' | 'Mobile' | 'System' | 'Game' | 'Network' | 'System' | 'Security' | 'Game Development' | 'Automation' | 'Functional Programming' | 'DevOps';
 export type ProjectContext = 'Personal' | 'Academic' | 'Freelance';
 
 export interface Project {
@@ -23,7 +23,7 @@ export const projects: Project[] = [
     id: '1',
     slug: 'zappy-network-game',
     name: 'Zappy',
-    domains: ['Network', 'Systems', 'Game', 'AI'],
+    domains: ['Network', 'System', 'Game', 'AI'],
     context: 'Academic',
     stack: ['C', 'Sockets', 'Networking', 'AI'],
     image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1080',
@@ -51,12 +51,12 @@ export const projects: Project[] = [
     id: '3',
     slug: 'mysudo',
     name: 'MySudo',
-    domains: ['Systems', 'Security'],
+    domains: ['System', 'Security'],
     context: 'Academic',
     stack: ['C', 'Linux', 'System Calls'],
     image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1080',
     description: 'Reimplementation of the sudo command with permission management.',
-    problem: 'Understand and replicate privilege escalation mechanisms in Unix systems.',
+    problem: 'Understand and replicate privilege escalation mechanisms in Unix System.',
     solution: 'Built a simplified sudo-like program handling user permissions, environment variables, and secure execution.',
     myRole: 'Developer responsible for system calls, permission checks, and security logic.',
     featured: false

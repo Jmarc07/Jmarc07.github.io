@@ -61,7 +61,7 @@ export function ContactPage() {
                 </a>
 
                 <a
-                  href="https://github.com"
+                  href="https://github.com/Jmarc07"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 border border-white/10 rounded-lg hover:bg-white/5 transition-colors"
@@ -76,7 +76,7 @@ export function ContactPage() {
                 </a>
 
                 <a
-                  href="https://linkedin.com"
+                  href="https://linkedin.com/in/jean-marc-naounou"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 border border-white/10 rounded-lg hover:bg-white/5 transition-colors"
