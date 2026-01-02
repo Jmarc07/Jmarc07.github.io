@@ -120,14 +120,14 @@ export function HomePage() {
               >
                 Me contacter
               </Link>
-              <a
+            {/*   <a
                 href="/cv.pdf"
                 download
                 className="inline-flex items-center gap-2 border border-white/20 px-6 py-3 rounded-lg hover:bg-white/10 transition-colors"
               >
                 <Download size={20} />
                 Télécharger mon CV
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

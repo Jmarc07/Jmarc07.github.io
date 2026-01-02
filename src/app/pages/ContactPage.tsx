@@ -92,7 +92,7 @@ export function ContactPage() {
               </div>
             </div>
 
-            <div>
+           {/*  <div>
               <a
                 href="/cv.pdf"
                 download
@@ -101,7 +101,7 @@ export function ContactPage() {
                 <Download size={20} />
                 Télécharger mon CV
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* Contact Form */}
