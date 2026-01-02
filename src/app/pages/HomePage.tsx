@@ -7,12 +7,12 @@ export function HomePage() {
   const featuredProjects = getFeaturedProjects();
 
   const expertiseAreas = [
-    { icon: Code2, title: 'Web Development', description: 'Applications web modernes et performantes' },
-    { icon: Server, title: 'Backend', description: 'APIs robustes et scalables' },
-    { icon: Code2, title: 'Frontend', description: 'Interfaces utilisateur réactives' },
-    { icon: Smartphone, title: 'Mobile', description: 'Applications mobiles cross-platform' },
-    { icon: Database, title: 'System', description: 'Programmation système et bas niveau' },
-    { icon: Gamepad2, title: 'Game/Network', description: 'Développement de jeux et réseaux' }
+    { icon: Code2, title: 'Web Development', description: 'Modern and high-performance web applications' },
+    { icon: Server, title: 'Backend', description: 'Robust and scalable APIs' },
+    { icon: Code2, title: 'Frontend', description: 'Responsive user interfaces' },
+    { icon: Smartphone, title: 'Mobile', description: 'Cross-platform mobile applications' },
+    { icon: Database, title: 'System', description: 'System and low-level programming' },
+    { icon: Gamepad2, title: 'Game/Network', description: 'Game and network development' }
   ];
 
   return (
@@ -24,21 +24,21 @@ export function HomePage() {
             Software Developer
           </h1>
           <p className="text-xl md:text-2xl text-gray-400 mb-8">
-            Développement de solutions logicielles orientées performance pour le web, le mobile et les systèmes
+            Development of performance-oriented software solutions for web, mobile and systems
           </p>
           <div className="flex flex-wrap gap-4">
             <Link
               to="/projects"
               className="inline-flex items-center gap-2 bg-white text-black px-6 py-3 rounded-lg hover:bg-gray-200 transition-colors"
             >
-              Voir mes projets
+              View my projects
               <ArrowRight size={20} />
             </Link>
             <Link
               to="/contact"
               className="inline-flex items-center gap-2 border border-white/20 px-6 py-3 rounded-lg hover:bg-white/10 transition-colors"
             >
-              Me contacter
+              Contact me
             </Link>
           </div>
         </div>
@@ -47,16 +47,16 @@ export function HomePage() {
       {/* About Section */}
       <section className="border-t border-white/10 bg-white/5">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
-          <h2 className="text-3xl md:text-4xl mb-6">À propos</h2>
+          <h2 className="text-3xl md:text-4xl mb-6">About</h2>
           <div className="max-w-3xl text-gray-300 space-y-4">
             <p>
-              Développeur étudiant avec une approche polyvalente du développement logiciel.
-              J’interviens sur des projets front-end, back-end, mobile et jeux, avec une compréhension
-              des systèmes et des bases réseau.
+              Student developer with a versatile approach to software development.
+              I work on front-end, back-end, mobile and game projects, with an understanding
+              of systems and networking fundamentals.
             </p>
             <p>
-              Curieux et adaptable, je m’intéresse à différents domaines techniques et cherche à
-              développer des solutions complètes, cohérentes et fonctionnelles.
+              Curious and adaptable, I'm interested in various technical domains and strive to
+              develop complete, coherent and functional solutions.
             </p>
           </div>
         </div>
@@ -65,7 +65,7 @@ export function HomePage() {
       {/* Expertise Section */}
       <section className="border-t border-white/10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
-          <h2 className="text-3xl md:text-4xl mb-12">Domaines d'expertise</h2>
+          <h2 className="text-3xl md:text-4xl mb-12">Areas of Expertise</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {expertiseAreas.map((area) => (
               <div
@@ -85,12 +85,12 @@ export function HomePage() {
       <section className="border-t border-white/10 bg-white/5">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
           <div className="flex justify-between items-center mb-12">
-            <h2 className="text-3xl md:text-4xl">Projets en vedette</h2>
+            <h2 className="text-3xl md:text-4xl">Featured Projects</h2>
             <Link
               to="/projects"
               className="text-gray-400 hover:text-white transition-colors inline-flex items-center gap-2"
             >
-              Voir tous les projets
+              View all projects
               <ArrowRight size={20} />
             </Link>
           </div>
@@ -107,18 +107,18 @@ export function HomePage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center max-w-2xl mx-auto">
             <h2 className="text-3xl md:text-4xl mb-6">
-              Travaillons ensemble
+              Let's work together
             </h2>
             <p className="text-gray-400 mb-8">
-              Je suis disponible pour des opportunités de stage et des missions freelance.
-              N'hésitez pas à me contacter pour discuter de votre projet.
+              I am available for internship opportunities and freelance missions.
+              Feel free to contact me to discuss your project.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 to="/contact"
                 className="inline-flex items-center gap-2 bg-white text-black px-6 py-3 rounded-lg hover:bg-gray-200 transition-colors"
               >
-                Me contacter
+                Contact me
               </Link>
             {/*   <a
                 href="/cv.pdf"
@@ -126,7 +126,7 @@ export function HomePage() {
                 className="inline-flex items-center gap-2 border border-white/20 px-6 py-3 rounded-lg hover:bg-white/10 transition-colors"
               >
                 <Download size={20} />
-                Télécharger mon CV
+                Download my resume
               </a> */}
             </div>
           </div>

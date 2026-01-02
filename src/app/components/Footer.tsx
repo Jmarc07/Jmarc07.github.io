@@ -10,7 +10,7 @@ export function Footer() {
           <div>
             <h3 className="text-white mb-4">Portfolio</h3>
             <p className="text-gray-400 text-sm">
-              Développeur Full-Stack passionné par la création de solutions innovantes.
+              Full-Stack Developer passionate about creating innovative solutions.
             </p>
           </div>
 
@@ -19,12 +19,12 @@ export function Footer() {
             <ul className="space-y-2">
               <li>
                 <a href="/" className="text-gray-400 hover:text-white text-sm transition-colors">
-                  Accueil
+                  Home
                 </a>
               </li>
               <li>
                 <a href="/projects" className="text-gray-400 hover:text-white text-sm transition-colors">
-                  Projets
+                  Projects
                 </a>
               </li>
               <li>
@@ -36,7 +36,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-white mb-4">Réseaux</h3>
+            <h3 className="text-white mb-4">Social</h3>
             <div className="flex gap-4">
               <a
                 href="https://github.com"
@@ -68,7 +68,7 @@ export function Footer() {
         </div>
 
         <div className="mt-8 pt-8 border-t border-white/10 text-center text-gray-400 text-sm">
-          <p>&copy; {currentYear} Portfolio. Tous droits réservés.</p>
+          <p>&copy; {currentYear} Portfolio. All rights reserved.</p>
         </div>
       </div>
     </footer>
