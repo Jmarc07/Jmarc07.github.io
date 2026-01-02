@@ -7,8 +7,8 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navItems = [
-    { path: '/', label: 'Accueil' },
-    { path: '/projects', label: 'Projets' },
+    { path: '/', label: 'Home' },
+    { path: '/projects', label: 'Projects' },
     { path: '/contact', label: 'Contact' }
   ];
 

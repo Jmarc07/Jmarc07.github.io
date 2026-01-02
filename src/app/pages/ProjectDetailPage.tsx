@@ -11,10 +11,10 @@ export function ProjectDetailPage() {
     return (
       <div className="bg-black text-white min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl mb-4">Projet non trouvé</h1>
+          <h1 className="text-4xl mb-4">Project not found</h1>
           <Link to="/projects" className="text-gray-400 hover:text-white inline-flex items-center gap-2">
             <ArrowLeft size={20} />
-            Retour aux projets
+            Back to projects
           </Link>
         </div>
       </div>
@@ -31,7 +31,7 @@ export function ProjectDetailPage() {
             className="text-gray-400 hover:text-white inline-flex items-center gap-2 transition-colors"
           >
             <ArrowLeft size={20} />
-            Retour aux projets
+            Back to projects
           </Link>
         </div>
       </div>
@@ -51,7 +51,7 @@ export function ProjectDetailPage() {
               <div>
                 <h1 className="text-4xl md:text-5xl mb-4">{project.name}</h1>
                 <div className="flex flex-wrap gap-2">
-                  <Badge>{project.domain}</Badge>
+                  <Badge>{project.domains}</Badge>
                   <Badge variant="outline">{project.context}</Badge>
                 </div>
               </div>
@@ -75,7 +75,7 @@ export function ProjectDetailPage() {
                     className="inline-flex items-center gap-2 bg-white text-black px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors"
                   >
                     <ExternalLink size={20} />
-                    Démo
+                    Demo
                   </a>
                 )}
               </div>
@@ -100,10 +100,10 @@ export function ProjectDetailPage() {
           <div className="lg:col-span-2 space-y-12">
             {/* Context */}
             <section>
-              <h2 className="text-2xl mb-4">Contexte</h2>
+              <h2 className="text-2xl mb-4">Context</h2>
               <div className="text-gray-300 leading-relaxed">
                 <p className="mb-2">
-                  <span className="text-white">Type de projet:</span> {project.context}
+                  <span className="text-white">Project type:</span> {project.context}
                 </p>
                 <p>{project.description}</p>
               </div>
@@ -111,7 +111,7 @@ export function ProjectDetailPage() {
 
             {/* Problem */}
             <section>
-              <h2 className="text-2xl mb-4">Problème</h2>
+              <h2 className="text-2xl mb-4">Problem</h2>
               <p className="text-gray-300 leading-relaxed">
                 {project.problem}
               </p>
@@ -127,7 +127,7 @@ export function ProjectDetailPage() {
 
             {/* My Role */}
             <section>
-              <h2 className="text-2xl mb-4">Mon Rôle</h2>
+              <h2 className="text-2xl mb-4">My Role</h2>
               <p className="text-gray-300 leading-relaxed">
                 {project.myRole}
               </p>
@@ -137,14 +137,14 @@ export function ProjectDetailPage() {
           {/* Sidebar */}
           <div className="lg:col-span-1">
             <div className="sticky top-24 border border-white/10 rounded-lg p-6 bg-white/5">
-              <h3 className="text-xl mb-4">Informations</h3>
+              <h3 className="text-xl mb-4">Information</h3>
               <dl className="space-y-4">
                 <div>
-                  <dt className="text-gray-400 text-sm mb-1">Domaine</dt>
-                  <dd className="text-white">{project.domain}</dd>
+                  <dt className="text-gray-400 text-sm mb-1">Domain</dt>
+                  <dd className="text-white">{project.domains}</dd>
                 </div>
                 <div>
-                  <dt className="text-gray-400 text-sm mb-1">Contexte</dt>
+                  <dt className="text-gray-400 text-sm mb-1">Context</dt>
                   <dd className="text-white">{project.context}</dd>
                 </div>
                 <div>

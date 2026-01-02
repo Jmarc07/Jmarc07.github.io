@@ -11,10 +11,10 @@ export function ProjectsPage() {
     <div className="bg-black text-white min-h-screen">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 md:py-20">
         <h1 className="text-4xl md:text-5xl mb-8">
-          Mes Projets
+          My Projects
         </h1>
         <p className="text-gray-400 text-lg mb-12 max-w-2xl">
-          Découvrez mes réalisations dans différents domaines du développement logiciel.
+          Discover my work across different areas of software development.
         </p>
 
         {/* Filters */}
@@ -46,7 +46,7 @@ export function ProjectsPage() {
         ) : (
           <div className="text-center py-20">
             <p className="text-gray-400 text-lg">
-              Aucun projet trouvé dans cette catégorie.
+              No projects found in this category.
             </p>
           </div>
         )}

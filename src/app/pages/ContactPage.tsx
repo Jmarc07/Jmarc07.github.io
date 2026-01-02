@@ -17,7 +17,7 @@ export function ContactPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Simulate form submission
-    toast.success('Message envoyé avec succès !');
+    toast.success('Message sent successfully!');
     setFormData({ name: '', email: '', subject: '', message: '' });
   };
 
@@ -33,19 +33,19 @@ export function ContactPage() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 md:py-20">
         <div className="max-w-2xl mx-auto mb-12 text-center">
           <h1 className="text-4xl md:text-5xl mb-6">
-            Contactez-moi
+            Contact me
           </h1>
-          <p className="text-gray-400 text-lg">
-            Je suis disponible pour des missions freelance et opportunités de stage.
-            N'hésitez pas à me contacter pour discuter de votre projet.
-          </p>
+            <p className="text-gray-400 text-lg">
+            I am available for freelance missions and internship opportunities.
+            Feel free to contact me to discuss your project.
+            </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-2xl mb-6">Informations de contact</h2>
+              <h2 className="text-2xl mb-6">Contact Information</h2>
               <div className="space-y-4">
                 <a
                   href="mailto:contact@example.com"
@@ -99,17 +99,17 @@ export function ContactPage() {
                 className="flex items-center justify-center gap-2 w-full border border-white/20 px-6 py-3 rounded-lg hover:bg-white/10 transition-colors"
               >
                 <Download size={20} />
-                Télécharger mon CV
+                Download my resume
               </a>
             </div> */}
           </div>
 
           {/* Contact Form */}
           <div>
-            <h2 className="text-2xl mb-6">Envoyez-moi un message</h2>
+            <h2 className="text-2xl mb-6">Send me a message</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <Label htmlFor="name" className="text-white">Nom</Label>
+                <Label htmlFor="name" className="text-white">Name</Label>
                 <Input
                   id="name"
                   name="name"
@@ -118,7 +118,7 @@ export function ContactPage() {
                   onChange={handleChange}
                   required
                   className="mt-2 bg-white/5 border-white/10 text-white"
-                  placeholder="Votre nom"
+                  placeholder="Your name"
                 />
               </div>
 
@@ -132,12 +132,12 @@ export function ContactPage() {
                   onChange={handleChange}
                   required
                   className="mt-2 bg-white/5 border-white/10 text-white"
-                  placeholder="votre@email.com"
+                  placeholder="your@email.com"
                 />
               </div>
 
               <div>
-                <Label htmlFor="subject" className="text-white">Sujet</Label>
+                <Label htmlFor="subject" className="text-white">Subject</Label>
                 <Input
                   id="subject"
                   name="subject"
@@ -146,7 +146,7 @@ export function ContactPage() {
                   onChange={handleChange}
                   required
                   className="mt-2 bg-white/5 border-white/10 text-white"
-                  placeholder="Sujet de votre message"
+                  placeholder="Subject of your message"
                 />
               </div>
 
@@ -160,7 +160,7 @@ export function ContactPage() {
                   required
                   rows={6}
                   className="mt-2 bg-white/5 border-white/10 text-white resize-none"
-                  placeholder="Votre message..."
+                  placeholder="Your message..."
                 />
               </div>
 
@@ -168,7 +168,7 @@ export function ContactPage() {
                 type="submit"
                 className="w-full bg-white text-black hover:bg-gray-200"
               >
-                Envoyer le message
+                Send Message
               </Button>
             </form>
           </div>
