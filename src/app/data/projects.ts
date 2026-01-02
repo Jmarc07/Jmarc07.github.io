@@ -40,7 +40,7 @@ export const projects: Project[] = [
     domains: ['Network'],
     context: 'Academic',
     stack: ['C++', 'TCP/IP', 'Sockets'],
-    image: 'https://images.unsplash.com/photo-1526378722484-bd91ca387e72?q=80&w=1080',
+    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1080',
     description: 'FTP server implementation following the FTP protocol.',
     problem: 'Understand low-level network communication and protocol implementation.',
     solution: 'Implemented an FTP server handling multiple clients, commands parsing, authentication, and file transfers.',
