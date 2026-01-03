@@ -1,10 +1,11 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Mail, Github, Linkedin, Download } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
 import { Textarea } from '../components/ui/textarea';
 import { Label } from '../components/ui/label';
 import { toast } from 'sonner';
+import emailjs from '@emailjs/browser';
 
 export function ContactPage() {
   const [formData, setFormData] = useState({
@@ -13,12 +14,71 @@ export function ContactPage() {
     subject: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // Initialiser EmailJS au chargement du composant
+  useEffect(() => {
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+    if (publicKey) {
+      emailjs.init(publicKey);
+      console.log('✅ EmailJS initialisé');
+    } else {
+      console.error('❌ Public Key EmailJS manquante');
+    }
+  }, []);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate form submission
-    toast.success('Message sent successfully!');
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setIsSubmitting(true);
+
+    try {
+      // Configuration EmailJS
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+
+      // Vérification que les variables d'environnement sont chargées
+      if (!serviceId || !templateId) {
+        throw new Error('Configuration EmailJS manquante. Veuillez redémarrer le serveur.');
+      }
+
+      console.log('📧 Envoi du message avec:', { serviceId, templateId });
+      console.log('📝 Données:', {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+      });
+
+      // EmailJS est déjà initialisé dans useEffect, pas besoin de passer publicKey
+      const response = await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          to_name: 'Jean-Marc Naounou',
+        }
+      );
+
+      console.log('✅ Réponse EmailJS:', response);
+      toast.success('Message envoyé avec succès !');
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch (error: any) {
+      console.error('Erreur complète:', error);
+      
+      let errorMessage = 'Erreur lors de l\'envoi du message.';
+      
+      if (error.text) {
+        errorMessage = `Erreur: ${error.text}`;
+      } else if (error.message) {
+        errorMessage = error.message;
+      }
+      
+      toast.error(errorMessage);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -166,9 +226,10 @@ export function ContactPage() {
 
               <Button
                 type="submit"
-                className="w-full bg-white text-black hover:bg-gray-200"
+                disabled={isSubmitting}
+                className="w-full bg-white text-black hover:bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Send Message
+                {isSubmitting ? 'Envoi en cours...' : 'Send Message'}
               </Button>
             </form>
           </div>
