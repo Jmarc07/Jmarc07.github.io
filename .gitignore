@@ -1,3 +1,7 @@
 Guidelines.md
 README.md
 node_modules
+
+# Environment variables
+.env.local
+.env
