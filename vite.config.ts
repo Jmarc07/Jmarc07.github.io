@@ -16,4 +16,9 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  base: '/', // GitHub Pages base URL
+  build: {
+    outDir: 'dist',
+    emptyOutDir: true,
+  },
 })
